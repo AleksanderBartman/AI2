@@ -12,5 +12,7 @@
             "name": "Aleksander Bartman"
         }
     ],
-    "require": {}
+    "require": {
+        "monolog/monolog": "^3.4"
+    }
 }
