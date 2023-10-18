@@ -1,0 +1,18 @@
+{
+    "name": "abartman/lab-composer",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Abartman\\LabComposer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aleksander Bartman"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^3.4"
+    }
+}
