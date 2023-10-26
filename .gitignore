@@ -1,6 +1,5 @@
 
 ###> symfony/framework-bundle ###
-.symfony.lock
 /.env.local
 /.env.local.php
 /.env.*.local
@@ -8,7 +7,6 @@
 /public/bundles/
 /var/
 /vendor/
-/.idea/
 ###< symfony/framework-bundle ###
 
 ###> phpunit/phpunit ###
@@ -20,3 +18,5 @@
 .phpunit.result.cache
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
+
+/.idea
