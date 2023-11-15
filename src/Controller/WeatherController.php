@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+
 use App\Entity\Location;
 use App\Repository\MeasurementRepository;
 use Symfony\Bridge\Doctrine\Attribute\MapEntity;
@@ -12,11 +13,10 @@ class WeatherController extends AbstractController
 {
     #[Route('/weather/{country}/{city}', name: 'app_weather', requirements: ['id' => '\d+'])]
     public function city(
-        #[MapEntity(mapping: ['country' => 'country' , 'city' => 'city'])]
+        #[MapEntity(mapping: ['country' => 'country', 'city' => 'city'])]
         Location $location,
-        MeasurementRepository $repository
+        MeasurementRepository $repository,
     ): Response
-
     {
         $measurements = $repository->findByLocation($location);
 
@@ -25,5 +25,4 @@ class WeatherController extends AbstractController
             'measurements' => $measurements,
         ]);
     }
-
 }
