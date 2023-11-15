@@ -12,7 +12,7 @@
                 <th>City</th>
                 <th>Country</th>
                 <th>Latitude</th>
-                <th>Longitude</th>
+                <th>Langitude</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -27,6 +27,7 @@
                 <td>
                     <a href="{{ path('app_location_show', {'id': location.id}) }}">show</a>
                     <a href="{{ path('app_location_edit', {'id': location.id}) }}">edit</a>
+                    <a href="{{ path('app_weather', {'country': location.country, 'city': location.city}) }}">weather</a>
                 </td>
             </tr>
         {% else %}

@@ -10,12 +10,7 @@
             <tr>
                 <th>Id</th>
                 <th>Date</th>
-                <th>Celcius</th>
-               <th>Pressure</th>
-                <th>Windspeed</th>
-                <th>Rain</th>
-                <th>Humidity</th>
-                <th>Is_sunny</th>
+                <th>Celsius</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -25,11 +20,6 @@
                 <td>{{ measurement.id }}</td>
                 <td>{{ measurement.date ? measurement.date|date('Y-m-d') : '' }}</td>
                 <td>{{ measurement.celcius }}</td>
-                <td>{{ measurement.pressure }}</td>
-                -<td>{{ measurement.windspeed }}</td>
-                <td>{{ measurement.rain }}</td>
-                <td>{{ measurement.humidity }}</td>
-                <td>{{ measurement.isSunny ? 'Yes' : 'No' }}</td>
                 <td>
                     <a href="{{ path('app_measurement_show', {'id': measurement.id}) }}">show</a>
                     <a href="{{ path('app_measurement_edit', {'id': measurement.id}) }}">edit</a>
@@ -37,7 +27,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="9">no records found</td>
+                <td colspan="4">no records found</td>
             </tr>
         {% endfor %}
         </tbody>
