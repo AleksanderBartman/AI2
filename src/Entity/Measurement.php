@@ -64,4 +64,10 @@ class Measurement
 
         return $this;
     }
+
+    public function getFahrenheit(): ?string
+    {
+        $fahrenheit = $this->celcius * 9 /5 +32;
+        return "$fahrenheit";
+    }
 }
